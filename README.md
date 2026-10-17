@@ -38,7 +38,7 @@ The following commands assume you are in the project directory and your virtual 
 
 ### 1. Clone the repository
 
-    git clone <YOUR-REPOSITORY-URL>
+    git clone https://github.com/hazard4321/vuln-triage.git
     cd vuln-triage
 
 Replace `<YOUR-REPOSITORY-URL>` with the URL of your Git repository.
