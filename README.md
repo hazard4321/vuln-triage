@@ -32,8 +32,6 @@ The core workflow does not require Ollama.
 - Internet access to retrieve public vulnerability data.
 - Ollama and a locally downloaded model only if you use the AI advisory feature.
 
-The following commands assume you are in the project directory and your virtual environment is active.
-
 ## Installation
 
 ### 1. Clone the repository
@@ -41,11 +39,7 @@ The following commands assume you are in the project directory and your virtual 
     git clone https://github.com/hazard4321/vuln-triage.git
     cd vuln-triage
 
-Replace `<YOUR-REPOSITORY-URL>` with the URL of your Git repository.
-
 ### 2. Create and activate a virtual environment
-
-On Linux:
 
     python3 -m venv .venv
     source .venv/bin/activate
@@ -176,21 +170,6 @@ Check that the Python files compile:
     └── README.md
 
 The `reports/` directory contains generated output and is ignored by Git. The `docs/` directory is intended for additional project documentation.
-
-## Current limitations
-
-- Assessment quality depends on data available from upstream services.
-- The priority model may not reflect every organisation's risk appetite.
-- Asset context is supplied manually; the tool does not discover assets or verify installed software itself.
-- AI-generated advisories require human review.
-- The project does not automatically patch systems or exploit vulnerabilities.
-
-## Roadmap
-
-- Document the current priority rules and assumptions.
-- Improve asset-context handling and explainable prioritisation.
-- Expand tests for missing data and upstream-service failures.
-- Improve report clarity and operational usefulness.
 
 ## Disclaimer
 
