@@ -34,6 +34,54 @@ The core workflow does not require Ollama.
 
 The following commands assume you are in the project directory and your virtual environment is active.
 
+## Installation
+
+### 1. Clone the repository
+
+    git clone <YOUR-REPOSITORY-URL>
+    cd vuln-triage
+
+Replace `<YOUR-REPOSITORY-URL>` with the URL of your Git repository.
+
+### 2. Create and activate a virtual environment
+
+On Linux:
+
+    python3 -m venv .venv
+    source .venv/bin/activate
+
+If Python's virtual environment support is missing on Ubuntu, install it with:
+
+    sudo apt update
+    sudo apt install python3-venv
+
+### 3. Run the application
+
+The core application uses only the Python standard library, so no additional Python packages are required.
+
+    python cli.py --help
+    python cli.py CVE-2024-3400
+
+### 4. Run the tests
+
+    python -m unittest discover -s tests -v
+
+### 5. Optional: Enable AI-generated advisories
+
+The AI advisory feature requires Ollama to be installed and running locally, with the configured model available.
+
+The default model configured in `advisory_ai.py` is `llama3.2:3b`.
+
+After setting up Ollama and downloading the model, verify that the model is available:
+
+    ollama list
+
+Then run:
+
+    python cli.py CVE-2024-3400 --ai-advisory
+
+The AI feature is optional; the core vulnerability triage workflow works without it.
+
 ## Quick start
 
 Assess a CVE:
